@@ -18,6 +18,7 @@ public class HellobootApplication {
     public static void main(String[] args) {
         GenericApplicationContext applicationContext = new GenericApplicationContext();
         applicationContext.registerBean(HellobootApplication.class); // 빈 등록
+        applicationContext.registerBean(SimpleHelloService.class); // 빈 등록
         applicationContext.refresh(); // 초기화해서 빈 객체 생성
 
         ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();// 톰캣 웹서버 생성
