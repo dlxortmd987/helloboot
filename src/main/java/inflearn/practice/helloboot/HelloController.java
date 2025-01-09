@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Objects;
 
 @RestController
-@RequestMapping("/hello")
 public class HelloController {
     private final HelloService helloService;
 
@@ -14,7 +13,7 @@ public class HelloController {
         this.helloService = helloService;
     }
 
-    @GetMapping
+    @GetMapping("/hello")
     public String hello(String name) {
         return helloService.sayHello(Objects.requireNonNull(name));
     }
