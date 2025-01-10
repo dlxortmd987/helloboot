@@ -14,7 +14,7 @@ public class HelloController {
     }
 
     @GetMapping("/hello")
-    public String hello(String name) {
+    public String hello(@RequestParam("name") String name) {
         return helloService.sayHello(Objects.requireNonNull(name));
     }
 }
