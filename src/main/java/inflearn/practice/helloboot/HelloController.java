@@ -1,9 +1,8 @@
 package inflearn.practice.helloboot;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Objects;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
@@ -15,6 +14,10 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(@RequestParam("name") String name) {
-        return helloService.sayHello(Objects.requireNonNull(name));
+        if (name == null || name.length() == 0) {
+            throw new IllegalArgumentException();
+        }
+
+        return helloService.sayHello(name);
     }
 }
