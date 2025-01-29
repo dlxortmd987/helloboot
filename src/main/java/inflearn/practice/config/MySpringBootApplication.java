@@ -1,6 +1,5 @@
-package inflearn.practice.helloboot;
+package inflearn.practice.config;
 
-import inflearn.practice.config.EnableMyAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,5 +1,6 @@
 package inflearn.practice.helloboot;
 
+import inflearn.practice.config.MySpringBootApplication;
 import org.springframework.boot.SpringApplication;
 
 @MySpringBootApplication
