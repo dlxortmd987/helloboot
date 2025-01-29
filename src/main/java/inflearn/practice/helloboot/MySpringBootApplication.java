@@ -1,10 +1,8 @@
 package inflearn.practice.helloboot;
 
-import inflearn.practice.config.autoconfig.DispatcherServletConfig;
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import inflearn.practice.config.EnableMyAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,6 +13,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Configuration
 @ComponentScan
-@Import({DispatcherServletConfig.class, TomcatServletWebServerFactory.class})
+@EnableMyAutoConfiguration
 public @interface MySpringBootApplication {
 }
