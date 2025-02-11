@@ -1,6 +1,7 @@
 package inflearn.practice.config.autoconfig;
 
 import inflearn.practice.config.MyAutoConfiguration;
+import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
@@ -8,11 +9,6 @@ import org.springframework.core.env.Environment;
 public class ServerPropertiesConfig {
     @Bean
     public ServerProperties serverProperties(Environment environment) {
-        ServerProperties properties = new ServerProperties();
-
-        properties.setContextPath(environment.getProperty("contextPath"));
-        properties.setPort(environment.getProperty("port", Integer.class));
-
-        return properties;
+        return Binder.get(environment).bind("", ServerProperties.class).get();
     }
 }
