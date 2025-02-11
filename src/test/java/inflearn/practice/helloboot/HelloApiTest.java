@@ -11,11 +11,11 @@ import org.springframework.http.ResponseEntity;
 public class HelloApiTest {
     @Test
     void helloApi() {
-        // http localhost:8080/app/hello?name=Spring
+        // http localhost:9090/app/hello?name=Spring
         TestRestTemplate rest = new TestRestTemplate();
 
         ResponseEntity<String> res = rest.getForEntity(
-                "http://localhost:8080/app/hello?name={name}",
+                "http://localhost:9090/app/hello?name={name}",
                 String.class,
                 "Spring"
         );
@@ -34,7 +34,7 @@ public class HelloApiTest {
         TestRestTemplate rest = new TestRestTemplate();
 
         ResponseEntity<String> res = rest.getForEntity(
-                "http://localhost:8080/app/hello?name=",
+                "http://localhost:9090/app/hello?name=",
                 String.class
         );
 
