@@ -2,7 +2,7 @@ package inflearn.practice.config.autoconfig;
 
 import inflearn.practice.config.MyConfigurationProperties;
 
-@MyConfigurationProperties
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
     private String contextPath;
     private int port;
