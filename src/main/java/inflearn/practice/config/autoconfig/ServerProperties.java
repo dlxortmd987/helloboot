@@ -1,5 +1,8 @@
 package inflearn.practice.config.autoconfig;
 
+import inflearn.practice.config.MyConfigurationProperties;
+
+@MyConfigurationProperties
 public class ServerProperties {
     private String contextPath;
     private int port;
