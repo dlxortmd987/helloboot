@@ -3,3 +3,4 @@ inflearn.practice.config.autoconfig.PropertyPostProcessorConfig
 inflearn.practice.config.autoconfig.DispatcherServletConfig
 inflearn.practice.config.autoconfig.TomcatWebServerConfig
 inflearn.practice.config.autoconfig.JettyWebServerConfig
+inflearn.practice.config.autoconfig.DataSourceConfig
